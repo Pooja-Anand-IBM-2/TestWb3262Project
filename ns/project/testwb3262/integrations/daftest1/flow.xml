@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.2" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="Invoke rest:project.testwb3262.TestWb3262Project.newUber" TIMEOUT="" SERVICE="project.testwb3262.TestWb3262Project.project_testwb3262_TestWb3262Project_newUber.operations.actions:getHISTORY" VALIDATE-IN="" VALIDATE-OUT="">
+  <COMMENT></COMMENT>
+</INVOKE>
+</FLOW>
