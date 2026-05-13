@@ -20,28 +20,46 @@ services:
     version: 12.1.0.0.65
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.testwb3262.TestWb3262Project.project_testwb3262_TestWb3262Project_uber_1.connections:po
+  packages:
+  - name: TestWb3262Project
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.0.65
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
-  ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getPRICE.virtualServiceName
-  : WmCloudStreams.RestVS
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.enableCompression
+  : "false"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.retryIfRequestSentOk
+  : "true"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.retryIfRequestSentOk
   : "true"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.validateAfterInactivity
   : "1000"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.tcpNoDelay
   : "false"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.enableSNI
-  : "true"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cr.preemptiveAuthEnabled
-  : "false"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.providerUrl
+  : https://api.uber.com/v1
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.socketLinger
+  : "-1"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.reuseAddr
   : "false"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cr.authSchemeType
-  : none
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.timeoutType
-  : none
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cr.preemptiveAuthEnabled
+  : "false"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.tcpNoDelay
+  : "false"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.poolIncrementSize
   : "1"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.poolable
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.validateAfterInactivity
+  : "1000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.retryCount
+  : "1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.poolable
   : "true"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.maximumPoolSize
   : "10"
@@ -49,38 +67,30 @@ configurationVariables:
   : "-1"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.startupRetryCount
   : "0"
-  ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getTIME.connectionAlias
-  : $connectionAlias
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.sockBuffSize
+  : "8192"
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getPRICE.connectionAlias
   : $connectionAlias
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getME.virtualServiceName
   : WmCloudStreams.RestVS
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.readTimeout
   : "30000"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.connectTimeout
-  : "30000"
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getME.connectionAlias
   : $connectionAlias
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.hostnameVerifier
-  : org.apache.http.conn.ssl.DefaultHostnameVerifier
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.startupBackoffSecs
-  : "10"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.idleTimeout
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.keepAliveInterval
   : "-1"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.retryCount
   : "1"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.socketLinger
-  : "-1"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.expireTimeout
   : "1000"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.connectionEnabled
   : "true"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.blockTimeout
-  : "1000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.readTimeout
+  : "30000"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.enableCompression
   : "false"
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.providerUrl
-  : https://api.uber.com/v1
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.poolIncrementSize
+  : "1"
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getTIME.virtualServiceName
   : WmCloudStreams.RestVS
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getHISTORY.connectionAlias
@@ -89,7 +99,61 @@ configurationVariables:
   : "true"
   ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getHISTORY.virtualServiceName
   : WmCloudStreams.RestVS
-  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.minimumPoolSize
-  : "1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.connectTimeout
+  : "30000"
   ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.sockBuffSize
   : "8192"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cr.authSchemeType
+  : none
+  ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getPRICE.virtualServiceName
+  : WmCloudStreams.RestVS
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.connectionEnabled
+  : "true"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cr.preemptiveAuthEnabled
+  : "false"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cr.authSchemeType
+  : none
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.reuseAddr
+  : "false"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.timeoutType
+  : none
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.startupRetryCount
+  : "0"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.poolable
+  : "true"
+  ? iscloudstreamsconnectorservice.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..operations..actions:getTIME.connectionAlias
+  : $connectionAlias
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.connectTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.timeoutType
+  : none
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.socketLinger
+  : "-1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.cn.providerUrl
+  : https://api.uber.com/v1
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.expireTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:po.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..testwb3262..TestWb3262Project..project_testwb3262_TestWb3262Project_uber_1..connections:newc1.minimumPoolSize
+  : "1"
